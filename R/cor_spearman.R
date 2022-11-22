@@ -21,11 +21,16 @@ cor_spearman <- function(x,y){
   if(any(grepl("Pass", check))==FALSE){
     return(check)
   } else{
+    xy<-data.frame(cbind(x,y))
     n<-length(x)
-    x_rank<-rank(x)
-    y_rank<-rank(y)
-    d<-x_rank-y_rank
-    rho<-1-(6*sum(d^2))/(n*(n^2-1))
+    xy$x_rank<-rank(x)
+    xy$y_rank<-rank(y)
+    x_rank_mean<-mean(xy$x_rank)
+    y_rank_mean<-mean(xy$y_rank)
+    Sxy<-(1/n)*sum((xy$x_rank-x_rank_mean)*(xy$y_rank-y_rank_mean))
+    Sx<-(1/n)*sum((xy$x_rank-x_rank_mean)^2)
+    Sy<-(1/n)*sum((xy$y_rank-y_rank_mean)^2)
+    rho<-Sxy/(Sx*Sy)^0.5
     return(rho)
   }
 }

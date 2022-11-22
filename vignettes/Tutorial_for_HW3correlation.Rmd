@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 
 ```{r setup}
 library(HW3correlation)
+library(stats)
 ```
 
 ## To use the function `cor_check`:
@@ -27,12 +28,12 @@ library(HW3correlation)
 3. If the length of x and y variable match with each other. In other words,the numbers of observation in x and y variable are the same.
 4. If there are enough (n>=3) values in x and y variable.
 ```{r}
-# non-valid variables
+## Non-valid variables
 x<-c(1,2,3,"4",5,"")
 y<-c(8,"2")
 cor_check(x,y)
 
-# valid variables
+## Valid variables
 x<-c(1,2,3,4,5)
 y<-c(8,7,5,5,4)
 cor_check(x,y)
@@ -42,30 +43,50 @@ cor_check(x,y)
 
 If the x and y variable pass the all the check in `cor_check`, the function `cor_pearson` will return the Pearson correlation value between these two variables. Otherwise, it will return the results of `cor_check`.
 ```{r}
-# non-valid variables
+## Non-valid variables
 x<-c(1,2,3,"4",5,"")
 y<-c(8,"2")
 cor_pearson(x,y)
 
-# valid variables
+## Valid variables
 a<-c(1,2,3,4,5)
 b<-c(8,7,5,5,4)
 cor_pearson(a,b)
+
+## Compare with existing function: cor(x,y,method="pearson")
+HW3cor_pearson<-cor_pearson(mtcars$mpg,mtcars$cyl)
+stats_cor_pearson<-cor(mtcars$mpg,mtcars$cyl,method="pearson")
+
+# Test the correctness
+all.equal(HW3cor_pearson,stats_cor_pearson)
+
+# Test the efficiency
+bench::mark(HW3cor_pearson,stats_cor_pearson)
 ```
 
 ## To use the function `cor_spearman`:
 
 If the x and y variable pass the all the check in `cor_check`, the function `cor_spearman` will return the  Spearman correlation value between these two variables. Otherwise, it will return the results of `cor_check`.
 ```{r}
-# non-valid variables
+## Non-valid variables
 x<-c(1,2,3,"4",5,"")
 y<-c(8,"2")
 cor_spearman(x,y)
 
-# valid variables
+## Valid variables
 a<-c(1,2,3,4,5)
 b<-c(8,7,5,5,4)
 cor_spearman(a,b)
+
+## Compare with existing function: cor(x,y,method="spearman")
+HW3cor_spearman<-cor_spearman(mtcars$mpg,mtcars$cyl)
+stats_cor_spearman<-cor(mtcars$mpg,mtcars$cyl,method="spearman")
+
+# Test the correctness
+all.equal(HW3cor_spearman,stats_cor_spearman)
+
+# Test the efficiency
+bench::mark(HW3cor_spearman,stats_cor_spearman)
 ```
 
 
@@ -73,14 +94,24 @@ cor_spearman(a,b)
 
 If the x and y variable pass the all the check in `cor_check`, the function `cor_kendallB` will return the Kendall’s tau-b value between these two variables. Otherwise, it will return the results of `cor_check`.
 ```{r}
-# non-valid variables
+## Non-valid variables
 x<-c(1,2,3,"4",5,"")
 y<-c(8,"2")
 cor_kendallB(x,y)
 
-# valid variables
+## Valid variables
 a<-c(1,2,3,4,5)
 b<-c(8,7,5,5,4)
 cor_kendallB(a,b)
+
+## Compare with existing function: cor(x,y,method="kendall")
+HW3cor_kendallB<-cor_kendallB(mtcars$mpg,mtcars$cyl)
+stats_cor_kendall<-cor(mtcars$mpg,mtcars$cyl,method="kendall")
+
+# Test the correctness
+all.equal(HW3cor_kendallB,stats_cor_kendall)
+
+# Test the efficiency
+bench::mark(HW3cor_kendallB,stats_cor_kendall)
 ```
 
