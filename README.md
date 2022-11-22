@@ -1,1 +1,6 @@
-# HW3Correlation
+Project's title: 
+  
+  HW3Correlation
+
+Project description:
+  
