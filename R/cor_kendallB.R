@@ -6,15 +6,16 @@
 #'
 #'@return the Kendall’s tau-b between x and y.
 #'
-#'@import DescTools
-#'
 #'@examples
 #'x<-c(1,2,3,4,5,6,7,8,9)
 #'y<-c(2,5,87,3,7,5,3,7,79)
 #'cor_kendallB(x,y)
 #'
+#'@import DescTools
+#'
 #'@export
 #'
+
 cor_kendallB <- function(x, y){
   check<-cor_check(x,y)
   error <- "Error"
