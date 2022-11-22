@@ -4,8 +4,8 @@
 # HW3correlation
 
 <!-- badges: start -->
-
 [![R-CMD-check](https://github.com/SherryLi1234/HW3Correlation/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/SherryLi1234/HW3Correlation/actions/workflows/R-CMD-check.yaml)
+[![codecov](https://codecov.io/gh/SherryLi1234/HW3Correlation/branch/main/graph/badge.svg?token=EIgq3X6z7Q)](https://codecov.io/gh/SherryLi1234/HW3Correlation)
 <!-- badges: end -->
 
 ## Overview
