@@ -11,11 +11,12 @@ vignette: >
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
-)
+) 
 ```
 
 ```{r setup}
 library(HW3correlation)
+library(DescTools)
 library(stats)
 library(bench)
 ```
@@ -63,6 +64,7 @@ all.equal(HW3cor_pearson,stats_cor_pearson)
 
 # Test the efficiency
 bench::mark(HW3cor_pearson,stats_cor_pearson)
+
 ```
 
 ## To use the function `cor_spearman`:
@@ -115,4 +117,3 @@ all.equal(HW3cor_kendallB,stats_cor_kendall)
 # Test the efficiency
 bench::mark(HW3cor_kendallB,stats_cor_kendall)
 ```
-
