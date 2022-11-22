@@ -5,7 +5,10 @@
 ***
 
 **Overview**
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6556b551158c1f7b07dc3f7257ac19237744c91c
 HW3correlation is a grammar of data manipulation, providing functions that help you calculate the most common correlation values between two variables.
 
  * `cor_check`check if there is NA, empty cells, non-numeric, or unpaired values in each variable, and make sure there are at least 3 observations in each variable.
@@ -24,7 +27,10 @@ install.packages("HW3correlation")
 ***
  
 **Usage**
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6556b551158c1f7b07dc3f7257ac19237744c91c
 Note: Demonstrate the functions using R's default dataset: mtcars
 ```
 library(HW3correlation)
