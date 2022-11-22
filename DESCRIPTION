@@ -8,6 +8,7 @@ Description: This package is build to calculate three types of correlation value
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+VignetteBuilder: knitr
 Suggests: 
     knitr,
     rmarkdown,
@@ -15,5 +16,6 @@ Suggests:
 Config/testthat/edition: 3
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.2
-VignetteBuilder: knitr
+
+
 
