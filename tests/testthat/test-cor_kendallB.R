@@ -1,4 +1,6 @@
 test_that("multiplication works", {
-  expect_equal(cor_kendallB(mtcars$mpg,mtcars$cyl), -0.7953134)
-  expect_equal(cor_kendallB(mtcars$mpg,mtcars$drat), 0.4645488)
+  expect_equal(cor_kendallB(mtcars$mpg,mtcars$cyl),
+               cor(mtcars$mpg,mtcars$cyl,method="kendall"))
+  expect_equal(cor_kendallB(mtcars$mpg,mtcars$drat),
+               cor(mtcars$mpg,mtcars$drat,method="kendall"))
 })

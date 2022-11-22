@@ -31,8 +31,6 @@ cor_pearson <- function(x ,y){
 
     r<-(n*product_sum-x_sum*y_sum)/(((n*x2_sum-x_sum^2)*(n*y2_sum-y_sum^2))^0.5)
 
-    r <- round(r,7)
-
     return(r)}
 }
 

@@ -38,7 +38,5 @@ cor_kendallB <- function(x, y){
 
     taub <- (x$C - x$D) / sqrt((n0-n1)*(n0-n2))
 
-    taub <- round(taub,7)
-
     return(taub)
   }}

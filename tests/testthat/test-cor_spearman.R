@@ -1,4 +1,6 @@
 test_that("multiplication works", {
-  expect_equal(cor_spearman(mtcars$mpg,mtcars$cyl), -0.9108013)
-  expect_equal(cor_spearman(mtcars$mpg,mtcars$drat), 0.6514555)
+  expect_equal(cor_spearman(mtcars$mpg,mtcars$cyl),
+               cor(mtcars$mpg,mtcars$cyl,method="spearman"))
+  expect_equal(cor_spearman(mtcars$mpg,mtcars$drat),
+               cor(mtcars$mpg,mtcars$drat,method="spearman"))
 })

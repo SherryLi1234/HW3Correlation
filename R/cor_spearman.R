@@ -33,8 +33,6 @@ cor_spearman <- function(x,y){
 
     rho<-Sxy/(Sx*Sy)^0.5
 
-    rho <- round(rho,7)
-
     return(rho)
   }
 }
