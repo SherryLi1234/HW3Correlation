@@ -4,12 +4,14 @@ Title: Package for HW3
 Version: 0.1.0
 Author: Xin Li
 Maintainer: Xin Li <sherli@umich.edu>
-Description: This package is build to calculate three types of correlation value for two variables, 
-including Pearson correlation, Spearman's correlation and Kendall’s tau-b value.
+Description: This package is build to calculate three types of correlation value for two variables, including Pearson correlation, Spearman's correlation and Kendall’s tau-b value.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Suggests: 
+    knitr,
+    rmarkdown,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 RoxygenNote: 7.2.2
+VignetteBuilder: knitr

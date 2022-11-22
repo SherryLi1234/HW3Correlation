@@ -1,0 +1,86 @@
+---
+title: "Tutorial_for_HW3correlation"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Tutorial_for_HW3correlation}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(HW3correlation)
+```
+
+## To use the function `cor_check`:
+
+`cor_check` check the following issues and return the results:
+
+1. If there is black cell or NA in x and y variable.
+2. If there is non-numeric value in x and y variable.
+3. If the length of x and y variable match with each other. In other words,the numbers of observation in x and y variable are the same.
+4. If there are enough (n>=3) values in x and y variable.
+```{r}
+# non-valid variables
+x<-c(1,2,3,"4",5,"")
+y<-c(8,"2")
+cor_check(x,y)
+
+# valid variables
+x<-c(1,2,3,4,5)
+y<-c(8,7,5,5,4)
+cor_check(x,y)
+```
+
+## To use the function `cor_pearson`:
+
+If the x and y variable pass the all the check in `cor_check`, the function `cor_pearson` will return the Pearson correlation value between these two variables. Otherwise, it will return the results of `cor_check`.
+```{r}
+# non-valid variables
+x<-c(1,2,3,"4",5,"")
+y<-c(8,"2")
+cor_pearson(x,y)
+
+# valid variables
+a<-c(1,2,3,4,5)
+b<-c(8,7,5,5,4)
+cor_pearson(a,b)
+```
+
+## To use the function `cor_spearman`:
+
+If the x and y variable pass the all the check in `cor_check`, the function `cor_spearman` will return the  Spearman correlation value between these two variables. Otherwise, it will return the results of `cor_check`.
+```{r}
+# non-valid variables
+x<-c(1,2,3,"4",5,"")
+y<-c(8,"2")
+cor_spearman(x,y)
+
+# valid variables
+a<-c(1,2,3,4,5)
+b<-c(8,7,5,5,4)
+cor_spearman(a,b)
+```
+
+
+## To use the function `cor_kendallB`:
+
+If the x and y variable pass the all the check in `cor_check`, the function `cor_kendallB` will return the Kendall’s tau-b value between these two variables. Otherwise, it will return the results of `cor_check`.
+```{r}
+# non-valid variables
+x<-c(1,2,3,"4",5,"")
+y<-c(8,"2")
+cor_kendallB(x,y)
+
+# valid variables
+a<-c(1,2,3,4,5)
+b<-c(8,7,5,5,4)
+cor_kendallB(a,b)
+```
+

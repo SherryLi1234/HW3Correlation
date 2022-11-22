@@ -13,7 +13,7 @@ cor_check(x, y)
 the results of test
 }
 \description{
-Check if there is NA, empty cells, or non-numeric values in each variable.
+Check if there is NA, empty cells, non-numeric, un-paired values in each variable. And make sure there are at least 3 observation.
 }
 \examples{
 x<-c(1,2,3,"4","",6)

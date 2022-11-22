@@ -1,10 +1,10 @@
 #'cor_kendallB
 #'
-#'Calculate the Kendall’s tau-b between x and y.
+#'Calculate the Kendall’s tau-b correlation between x and y.
 #'
 #'@param x,y input value
 #'
-#'@return the Kendall’s tau-b between x and y.
+#'@return the Kendall’s tau-b correlation between x and y.
 #'
 #'@examples
 #'x<-c(1,2,3,4,5,6,7,8,9)
@@ -15,12 +15,10 @@
 #'
 #'@export
 #'
-
 cor_kendallB <- function(x, y){
   check<-cor_check(x,y)
-  error <- "Error"
 
-  if(any(grepl("pass", check))==TRUE){
+  if(any(grepl("Pass", check))==FALSE){
     return(check)
   } else {
 
@@ -39,5 +37,4 @@ cor_kendallB <- function(x, y){
     taub <- (x$C - x$D) / sqrt((n0-n1)*(n0-n2))
 
     return(taub)
-  }
-}
+  }}

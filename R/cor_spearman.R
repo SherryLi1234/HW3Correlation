@@ -15,9 +15,8 @@
 #'
 cor_spearman <- function(x,y){
   check<-cor_check(x,y)
-  error <- "Error"
 
-  if(any(grepl("pass", check))==TRUE){
+  if(any(grepl("Pass", check))==FALSE){
     return(check)
   } else{
     n<-length(x)

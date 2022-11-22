@@ -1,6 +1,6 @@
 #'cor_check
 #'
-#'Check if there is NA, empty cells, or non-numeric values in each variable.
+#'Check if there is NA, empty cells, non-numeric, un-paired values in each variable. And make sure there are at least 3 observation.
 #'
 #'@param x,y input value
 #'
