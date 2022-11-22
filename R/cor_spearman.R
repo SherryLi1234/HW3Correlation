@@ -30,7 +30,11 @@ cor_spearman <- function(x,y){
     Sxy<-(1/n)*sum((xy$x_rank-x_rank_mean)*(xy$y_rank-y_rank_mean))
     Sx<-(1/n)*sum((xy$x_rank-x_rank_mean)^2)
     Sy<-(1/n)*sum((xy$y_rank-y_rank_mean)^2)
+
     rho<-Sxy/(Sx*Sy)^0.5
+
+    rho <- round(rho,7)
+
     return(rho)
   }
 }
