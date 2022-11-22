@@ -11,6 +11,8 @@
 #'y<-c(2,5,87,3,7,5,3,7,79)
 #'cor_spearman(x,y)
 #'
+#'cor_spearman(mtcars$mpg,mtcars$cyl)
+#'
 #'@export
 #'
 cor_spearman <- function(x,y){

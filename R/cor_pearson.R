@@ -11,6 +11,8 @@
 #'y<-c(2,5,87,3,7,5,3,7,79)
 #'cor_pearson(x,y)
 #'
+#'cor_pearson(mtcars$mpg,mtcars$cyl)
+#'
 #'@export
 #'
 cor_pearson <- function(x ,y){

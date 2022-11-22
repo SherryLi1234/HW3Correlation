@@ -18,6 +18,8 @@ Check if there is NA, empty cells, non-numeric, un-paired values in each variabl
 \examples{
 x<-c(1,2,3,"4","",6)
 y<-c(5,3,7,1)
-cor_check(x,ycor)
+cor_check(x,y)
+
+cor_check(mtcars$mpg,mtcars$cyl)
 
 }

@@ -11,6 +11,8 @@
 #'y<-c(2,5,87,3,7,5,3,7,79)
 #'cor_kendallB(x,y)
 #'
+#'cor_kendallB(mtcars$mpg,mtcars$cyl)
+#'
 #'@import DescTools
 #'
 #'@export
