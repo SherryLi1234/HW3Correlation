@@ -33,6 +33,7 @@ install.packages("HW3correlation")
 
 Note: Demonstrate the functions using R's default dataset: mtcars
 ```
+library(DescTools)
 library(HW3correlation)
 
 cor_check(mtcars$mpg,mtcars$cyl)
