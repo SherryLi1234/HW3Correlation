@@ -17,7 +17,6 @@
 #'
 #'@export
 #'
-library(DescTools)
 cor_kendallB <- function(x, y){
   check<-cor_check(x,y)
 
