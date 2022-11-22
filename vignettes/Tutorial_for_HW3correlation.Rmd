@@ -18,6 +18,7 @@ knitr::opts_chunk$set(
 library(HW3correlation)
 library(DescTools)
 library(stats)
+library(bench)
 ```
 
 ## To use the function `cor_check`:
